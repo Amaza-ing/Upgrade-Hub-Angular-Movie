@@ -5,6 +5,7 @@ import { MovieListComponent } from './pages/movie-list/movie-list.component';
 import { MovieDetailComponent } from './pages/movie-detail/movie-detail.component';
 import { MovieFormPageComponent } from './pages/movie-form-page/movie-form-page.component';
 import { UserListComponent } from './pages/user-list/user-list.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,4 +13,5 @@ export const routes: Routes = [
   { path: 'movies/:movieName', component: MovieDetailComponent },
   { path: 'create', component: MovieFormPageComponent },
   { path: 'users', component: UserListComponent },
+  { path: 'users/:id', component: UserDetailsComponent },
 ];

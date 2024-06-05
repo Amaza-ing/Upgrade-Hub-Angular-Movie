@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  API_URL = "https://jsonplaceholder.typicode.com/users";
+  readonly API_URL = "https://jsonplaceholder.typicode.com/users";
 
   users: any[];
 
@@ -15,5 +15,9 @@ export class UserService {
 
   getUsers() {
     return this.http.get<any>(this.API_URL)
+  }
+
+  getUser(id: number) {
+    return this.http.get<any>(`${this.API_URL}/${id}`)
   }
 }
