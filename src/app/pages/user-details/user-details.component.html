@@ -3,8 +3,10 @@
 @if (selectedUser) {
   <h2>{{ selectedUser.name }}</h2>
   <h3>{{ selectedUser.email }}</h3>
-  <h3>{{ selectedUser.address.city }}</h3>
-  <h3>{{ selectedUser.address.street }}</h3>
+  <!-- <h3>{{ selectedUser.address.city }}</h3>
+  <h3>{{ selectedUser.address.street }}</h3> -->
 } @else {
   <h2>No hay ningún usuario con ese id</h2>
 }
+
+<a routerLink="/users">Volver</a>

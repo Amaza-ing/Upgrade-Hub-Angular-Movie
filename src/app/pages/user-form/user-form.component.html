@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<form (submit)="postUser()" [formGroup]="userForm">
+  <fieldset>
+    <label for="user-id">User id</label>
+    <input type="text" id="user-id" formControlName="id">
+  </fieldset>
+  <fieldset>
+    <label for="user-name">User Name</label>
+    <input type="text" id="user-name" formControlName="name">
+  </fieldset>
+  <fieldset>
+    <label for="email">User Email</label>
+    <input type="text" id="email" formControlName="email">
+  </fieldset>
+  <button>Crear Usuario</button>
+</form>

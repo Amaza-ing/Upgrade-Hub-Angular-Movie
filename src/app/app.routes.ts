@@ -6,6 +6,7 @@ import { MovieDetailComponent } from './pages/movie-detail/movie-detail.componen
 import { MovieFormPageComponent } from './pages/movie-form-page/movie-form-page.component';
 import { UserListComponent } from './pages/user-list/user-list.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { UserFormComponent } from './pages/user-form/user-form.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,4 +15,5 @@ export const routes: Routes = [
   { path: 'create', component: MovieFormPageComponent },
   { path: 'users', component: UserListComponent },
   { path: 'users/:id', component: UserDetailsComponent },
+  { path: 'user-form', component: UserFormComponent },
 ];
