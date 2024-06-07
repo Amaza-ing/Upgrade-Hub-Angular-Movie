@@ -15,22 +15,28 @@ export class UserFormComponent {
   id: FormControl;
   name: FormControl;
   email: FormControl;
+  address: FormGroup;
 
   constructor(public userService: UserService) {
     this.id = new FormControl('');
     this.name = new FormControl('');
     this.email = new FormControl('');
+    this.address = new FormGroup({
+      street: new FormControl(''),
+      city: new FormControl(''),
+    });
 
     this.userForm = new FormGroup({
       id: this.id,
       name: this.name,
-      email: this.email,    
-    })
+      email: this.email,
+      address: this.address,
+    });
   }
 
   postUser() {
     console.log(this.userForm.value);
-    
+
     this.userService.postUser(this.userForm.value).subscribe({
       next: (data) => {
         console.log(data);

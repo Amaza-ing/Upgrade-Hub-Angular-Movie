@@ -4,7 +4,7 @@
   @for (user of userService.users; track user.id) {
     <li>
       <div>
-        <a [routerLink]="user.id">
+        <a [routerLink]="user.id.toString()">
           <h2>{{user.name}}</h2>
         </a>
         <h3>{{user.email}}</h3>

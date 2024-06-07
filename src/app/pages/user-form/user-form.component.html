@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<form (submit)="postUser()" [formGroup]="userForm">
+<form [formGroup]="userForm">
   <fieldset>
     <label for="user-id">User id</label>
     <input type="text" id="user-id" formControlName="id">
@@ -13,5 +13,16 @@
     <label for="email">User Email</label>
     <input type="text" id="email" formControlName="email">
   </fieldset>
-  <button>Crear Usuario</button>
 </form>
+<form [formGroup]="address">
+  <fieldset>
+    <label for="user-city">User city</label>
+    <input type="text" id="user-city" formControlName="city">
+  </fieldset>
+  <fieldset>
+    <label for="user-street">User street</label>
+    <input type="text" id="user-street" formControlName="street">
+  </fieldset>
+</form>
+<button (click)="postUser()">Crear Usuario</button>
+

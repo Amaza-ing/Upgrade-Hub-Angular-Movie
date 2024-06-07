@@ -6,28 +6,28 @@ import User from '../models/User';
   providedIn: 'root'
 })
 export class UserService {
-  // readonly API_URL = "https://jsonplaceholder.typicode.com/users";
-  readonly API_URL = "https://ca8d440d5f971164a0b0.free.beeceptor.com/api/users"
+  readonly API_URL = "https://jsonplaceholder.typicode.com/users";
+  // readonly API_URL = "https://ca8d440d5f971164a0b0.free.beeceptor.com/api/users"
 
-  users: any[];
+  users: User[];
 
   constructor(private http: HttpClient) {
     this.users = [];
   }
 
   getUsers() {
-    return this.http.get<any[]>(this.API_URL)
+    return this.http.get<User[]>(this.API_URL)
   }
 
   getUser(id: number) {
-    return this.http.get<any>(`${this.API_URL}/${id}`)
+    return this.http.get<User>(`${this.API_URL}/${id}`)
   }
 
-  postUser(user: any) {
-    return this.http.post<any>(this.API_URL, user)
+  postUser(user: User) {
+    return this.http.post<User>(this.API_URL, user)
   }
 
-  deleteUser(id: string) {
+  deleteUser(id: number) {
     return this.http.delete<any>(`${this.API_URL}/${id}`)
   }
 }
